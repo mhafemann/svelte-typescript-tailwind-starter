@@ -508,9 +508,9 @@ var app = (function () {
     			if (left_slot) left_slot.c();
     			t2 = space();
     			if (right_slot) right_slot.c();
-    			add_location(div0, file, 5, 2, 158);
+    			add_location(div0, file, 5, 2, 162);
     			attr_dev(div1, "class", "h-12 flex justify-between items-center px-4");
-    			add_location(div1, file, 4, 0, 98);
+    			add_location(div1, file, 4, 0, 101);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -712,23 +712,23 @@ var app = (function () {
     			attr_dev(path0, "fill", "none");
     			set_style(path0, "--darkreader-inline-fill", "none");
     			attr_dev(path0, "d", "M0 0h256v256H0z");
-    			add_location(path0, file$1, 40, 152, 1816);
+    			add_location(path0, file$1, 40, 152, 1825);
     			attr_dev(circle, "cx", "128");
     			attr_dev(circle, "cy", "128");
     			attr_dev(circle, "r", "68");
-    			add_location(circle, file$1, 40, 229, 1893);
+    			add_location(circle, file$1, 40, 229, 1902);
     			attr_dev(path1, "d", "M128 44a8 8 0 008-8V16a8 8 0 00-16 0v20a8 8 0 008 8zM57.29 68.603A8 8 0 1068.603 57.29L54.461 43.147a8 8 0 10-11.314 11.314zM44 128a8 8 0 00-8-8H16a8 8 0 000 16h20a8 8 0 008-8zM57.29 187.397l-14.143 14.142a8 8 0 1011.314 11.314l14.142-14.143a8 8 0 10-11.313-11.313zM128 212a8 8 0 00-8 8v20a8 8 0 0016 0v-20a8 8 0 00-8-8zM198.71 187.397a8 8 0 10-11.313 11.313l14.142 14.143a8 8 0 1011.314-11.314zM240 120h-20a8 8 0 000 16h20a8 8 0 000-16zM193.054 70.946a7.975 7.975 0 005.656-2.343l14.143-14.142a8 8 0 10-11.314-11.314L187.397 57.29a8 8 0 005.657 13.656z");
-    			add_location(path1, file$1, 40, 263, 1927);
+    			add_location(path1, file$1, 40, 263, 1936);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "width", "24");
     			attr_dev(svg, "height", "24");
     			attr_dev(svg, "fill", "currentColor");
     			attr_dev(svg, "viewBox", "0 0 256 256");
     			set_style(svg, "--darkreader-inline-fill", "#000000");
-    			add_location(svg, file$1, 40, 6, 1670);
+    			add_location(svg, file$1, 40, 6, 1679);
     			attr_dev(button, "aria-label", "toggle dark mode");
     			attr_dev(button, "class", "w-8 h-8 m-0 p-0 rounded flex items-center justify-center focus:ring-4 ring-red-500 focus:outline-none text-blue-600 dark:text-yellow-400");
-    			add_location(button, file$1, 34, 2, 1353);
+    			add_location(button, file$1, 34, 2, 1356);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
