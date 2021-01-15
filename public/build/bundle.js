@@ -3444,9 +3444,9 @@ var app = (function () {
     			div = element("div");
     			pre = element("pre");
     			code = element("code");
-    			add_location(code, file$3, 18, 4, 598);
-    			add_location(pre, file$3, 17, 2, 587);
-    			attr_dev(div, "class", "text-sm font-mono rounded-md bg-gray-800 mb-4 p-4 text-gray-300");
+    			add_location(code, file$3, 18, 6, 612);
+    			add_location(pre, file$3, 17, 4, 599);
+    			attr_dev(div, "class", "text-sm leading-6 font-mono rounded-md bg-gray-800 mb-4 p-6 text-gray-300");
     			add_location(div, file$3, 16, 0, 506);
     		},
     		l: function claim(nodes) {
@@ -4402,48 +4402,127 @@ var app = (function () {
     const file$8 = "src\\site\\CodeTest.svelte";
 
     function create_fragment$b(ctx) {
-    	let div1;
+    	let div4;
+    	let div3;
+    	let h20;
+    	let t1;
     	let div0;
-    	let code;
+    	let code0;
+    	let t2;
+    	let h21;
+    	let t4;
+    	let div1;
+    	let code1;
+    	let t5;
+    	let h22;
+    	let t7;
+    	let div2;
+    	let code2;
     	let current;
 
-    	code = new Code({
-    			props: { source: /*source*/ ctx[0], lang: "css" },
+    	code0 = new Code({
+    			props: {
+    				source: /*cssSource*/ ctx[0],
+    				lang: "css"
+    			},
+    			$$inline: true
+    		});
+
+    	code1 = new Code({
+    			props: {
+    				source: /*svelteSource*/ ctx[1],
+    				lang: "svelte"
+    			},
+    			$$inline: true
+    		});
+
+    	code2 = new Code({
+    			props: {
+    				source: /*htmlSource*/ ctx[2],
+    				lang: "html"
+    			},
     			$$inline: true
     		});
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
+    			div4 = element("div");
+    			div3 = element("div");
+    			h20 = element("h2");
+    			h20.textContent = "CSS";
+    			t1 = space();
     			div0 = element("div");
-    			create_component(code.$$.fragment);
-    			attr_dev(div0, "class", "container");
-    			add_location(div0, file$8, 23, 2, 503);
-    			attr_dev(div1, "class", "flex justify-center");
-    			add_location(div1, file$8, 22, 0, 466);
+    			create_component(code0.$$.fragment);
+    			t2 = space();
+    			h21 = element("h2");
+    			h21.textContent = "Svelte";
+    			t4 = space();
+    			div1 = element("div");
+    			create_component(code1.$$.fragment);
+    			t5 = space();
+    			h22 = element("h2");
+    			h22.textContent = "HTML";
+    			t7 = space();
+    			div2 = element("div");
+    			create_component(code2.$$.fragment);
+    			attr_dev(h20, "class", "h2 mb-2");
+    			add_location(h20, file$8, 59, 4, 1415);
+    			attr_dev(div0, "class", "mb-4");
+    			add_location(div0, file$8, 60, 4, 1449);
+    			attr_dev(h21, "class", "h2 mb-2");
+    			add_location(h21, file$8, 63, 4, 1530);
+    			attr_dev(div1, "class", "mb-4");
+    			add_location(div1, file$8, 64, 4, 1567);
+    			attr_dev(h22, "class", "h2 mb-2");
+    			add_location(h22, file$8, 67, 4, 1654);
+    			attr_dev(div2, "class", "mb-4");
+    			add_location(div2, file$8, 68, 4, 1689);
+    			attr_dev(div3, "class", "container");
+    			add_location(div3, file$8, 58, 2, 1386);
+    			attr_dev(div4, "class", "flex justify-center");
+    			add_location(div4, file$8, 57, 0, 1349);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
-    			mount_component(code, div0, null);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div3);
+    			append_dev(div3, h20);
+    			append_dev(div3, t1);
+    			append_dev(div3, div0);
+    			mount_component(code0, div0, null);
+    			append_dev(div3, t2);
+    			append_dev(div3, h21);
+    			append_dev(div3, t4);
+    			append_dev(div3, div1);
+    			mount_component(code1, div1, null);
+    			append_dev(div3, t5);
+    			append_dev(div3, h22);
+    			append_dev(div3, t7);
+    			append_dev(div3, div2);
+    			mount_component(code2, div2, null);
     			current = true;
     		},
     		p: noop,
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(code.$$.fragment, local);
+    			transition_in(code0.$$.fragment, local);
+    			transition_in(code1.$$.fragment, local);
+    			transition_in(code2.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(code.$$.fragment, local);
+    			transition_out(code0.$$.fragment, local);
+    			transition_out(code1.$$.fragment, local);
+    			transition_out(code2.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
-    			destroy_component(code);
+    			if (detaching) detach_dev(div4);
+    			destroy_component(code0);
+    			destroy_component(code1);
+    			destroy_component(code2);
     		}
     	};
 
@@ -4462,7 +4541,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("CodeTest", slots, []);
 
-    	let source = `code[class*="language-"],
+    	let cssSource = `code[class*="language-"],
 pre[class*="language-"] {
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -4478,8 +4557,45 @@ pre[class*="language-"] {
 	line-height: 1.5;
 	color: #59ca56;
 	text-shadow: 0;
-}
-`;
+}`;
+
+    	// prettier-ignore
+    	let svelteSource = `<script lang="ts">
+  export let title = ''
+<\/script>
+
+<!-- prettier-ignore -->
+<header class="flex items-center py-6">
+  <div class="flex justify-between items-center container">
+    <h1 class="title" on:click={() => console.log("Hello")}>
+      {title}
+    </h1>
+    <slot></slot>
+  </div>
+</header>
+
+<style>
+  .bg-red {
+    background-color: red;
+  }
+<\/style>`;
+
+    	let htmlSource = `<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+  <meta 
+    name='viewport' 
+    content='width=device-width,initial-scale=1'>
+  <title>Svelte TS Tailwind</title>
+  <link rel='icon' type='image/png' href='/favicon.png'>
+  <link rel='stylesheet' href='/build/bundle.css'>
+  <link rel='stylesheet' href='prism-pojoaque.css'>
+  <script defer src='/build/bundle.js'><\/script>
+</head>
+<body>
+</body>
+</html>`;
 
     	const writable_props = [];
 
@@ -4487,17 +4603,24 @@ pre[class*="language-"] {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<CodeTest> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Code, source });
+    	$$self.$capture_state = () => ({
+    		Code,
+    		cssSource,
+    		svelteSource,
+    		htmlSource
+    	});
 
     	$$self.$inject_state = $$props => {
-    		if ("source" in $$props) $$invalidate(0, source = $$props.source);
+    		if ("cssSource" in $$props) $$invalidate(0, cssSource = $$props.cssSource);
+    		if ("svelteSource" in $$props) $$invalidate(1, svelteSource = $$props.svelteSource);
+    		if ("htmlSource" in $$props) $$invalidate(2, htmlSource = $$props.htmlSource);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [source];
+    	return [cssSource, svelteSource, htmlSource];
     }
 
     class CodeTest extends SvelteComponentDev {

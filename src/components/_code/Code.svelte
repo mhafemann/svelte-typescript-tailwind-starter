@@ -18,10 +18,10 @@
 </script>
 
 <!-- prettier-ignore -->
-<div class="text-sm font-mono rounded-md bg-gray-800 mb-4 p-4 text-gray-300">
-  <pre>
-    <code>
-      {@html highlighted || ""}
-    </code>
-  </pre>
+<div class="text-sm leading-6 font-mono rounded-md bg-gray-800 mb-4 p-6 text-gray-300">
+    <pre>
+      <code>
+        {@html highlighted || ""}
+      </code>
+    </pre>
 </div>

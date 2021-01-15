@@ -88,9 +88,15 @@ module.exports = {
     },
   },
   textSizes: {
-    sm: {
+    xs: {
       min: '14px',
       max: '18px',
+      minvw: '320px',
+      maxvw: '1400px'
+    },
+    sm: {
+      min: '16px',
+      max: '20px',
       minvw: '320px',
       maxvw: '1400px'
     },
