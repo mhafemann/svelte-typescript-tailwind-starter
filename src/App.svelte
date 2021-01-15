@@ -1,47 +1,45 @@
 <script lang="ts">
-  import Tailwindcss from "./Tailwindcss.svelte"
-  import NavBar from "./components/navbar/NavBar.svelte"
-  import ThemeToggleBtn from './components/theme_toggle/ThemeToggleBtn.svelte'
-  import {theme} from './components/theme_toggle/index.js'
-</script>
-<Tailwindcss />
+  import Tailwindcss from './Tailwindcss.svelte'
 
-<main class:dark={$theme === 'dark'} class="w-full h-full">
-  <div
-    class="nav bg-gray-200 dark:bg-gray-800 dark:text-gray-100 transition-colors duration-150">
-    <NavBar>
-      <span slot="left">
-      <div class="flex">
-      </div>
-      </span>
-      <span slot="right">
-        <ThemeToggleBtn/>
-      </span>
-    </NavBar>
+  // prettier-ignore
+  import { ThemeToggle, SideBar, Typography, TabManager} from './components/index'
+  import { ButtonsTest, CodeTest, TypographyTest, Layout, Header } from './site/index'
+
+  const navItems = [
+    { type: 'heading', text: 'utilities' },
+    { type: 'link', text: 'Typography', component: TypographyTest },
+    { type: 'link', text: 'Layouts' },
+    { type: 'heading', text: 'components' },
+    { type: 'link', text: 'Buttons', component: ButtonsTest },
+    { type: 'link', text: 'Code', component: CodeTest },
+  ]
+  let active = 5
+</script>
+
+<Tailwindcss />
+<Typography />
+<TabManager />
+
+<!-- prettier-ignore -->
+<main class="flex flex-col h-full w-full">
+<Layout>
+  <div slot="nav" style="height: 100%">
+    <SideBar navItems={navItems} bind:active>
+      
+    </SideBar>
   </div>
-  <div
-    class="body bg-gray-100 dark:bg-gray-900 transition-colors duration-150 text-gray-700 dark:text-gray-200">
-  </div>
-  <div
-    class="footer bg-gray-100 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-150" />
+  <span slot="main">
+    <Header title={navItems[active].text}>
+        <ThemeToggle/>
+    </Header>
+    <svelte:component this={navItems[active].component}/>
+  </span>
+</Layout>
+  
 </main>
 
-<style>
-  main {
-    display: grid;
-    grid-template-columns: 10rem 1fr 10rem;
-    grid-template-rows: 3rem 1fr 2.5rem;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-  }
-  .nav {
-    grid-area: 1 / 1 / 2 / 4;
-  }
-  .body {
-    grid-area: 2 / 1 / 3 / 4;
-    overflow-y: auto;
-  }
-  .footer {
-    grid-area: 3 / 1 / 4 / 4;
+<style global type="text/postcss">
+  .tr-200 {
+    @apply transition-colors duration-200;
   }
 </style>

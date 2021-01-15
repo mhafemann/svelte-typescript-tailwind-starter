@@ -11,7 +11,7 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.coolGray,
+      gray: colors.gray,
       yellow: colors.amber,
       blue: colors.lightBlue,
       red: colors.red,
@@ -22,13 +22,43 @@ module.exports = {
       center: true,
       padding: '1rem'
     },
+
     fontFamily: {
       'sans': [
-        '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', 'sans-serif'
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "avenir next",
+        "avenir",
+        "helvetica neue",
+        "helvetica",
+        "Ubuntu",
+        "roboto",
+        "noto",
+        "segoe ui",
+        "arial",
+        "sans-serif" 
+      ],
+      'serif': [
+        "Iowan Old Style",
+        "Apple Garamond",
+        "Baskerville",
+        "Times New Roman",
+        "Droid Serif",
+        "Times",
+        "Source Serif Pro",
+        "serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol"
       ],
       'mono': [
-        'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', 'monospace'
-      ]
+        "Menlo",
+        "Consolas",
+        "Monaco",
+        "Liberation Mono",
+        "Lucida Console",
+        "monospace"
+      ],
     },
     extend: {},
   },
@@ -49,7 +79,7 @@ module.exports = {
     resize: false,
     tableLayout: false,
     clear: false,
-    textSizes: false
+    outline: false,
   },
   variants: {
     extend: {
@@ -57,35 +87,45 @@ module.exports = {
       backgroundColor: ['active'],
     },
   },
+  textSizes: {
+    sm: {
+      min: '14px',
+      max: '18px',
+      minvw: '320px',
+      maxvw: '1400px'
+    },
+    md: {
+      min: '18px',
+      max: '22px',
+      minvw: '320px',
+      maxvw: '1400px'
+    },
+    lg: {
+      min: '22px',
+      max: '28px',
+      minvw: '320px',
+      maxvw: '1400px'
+    },
+    xl: {
+      min: '26px',
+      max: '32px',
+      minvw: '320px',
+      maxvw: '1400px'
+    },
+    xxl: {
+      min: '30px',
+      max: '38px',
+      minvw: '320px',
+      maxvw: '1400px'
+    }
+  },
+  modules: {
+    textSizes: false // disable the core module
+  },
   plugins: [
-    require('@tailwindcss/typography'),
     require('tailwindcss-fluid')({
-      textSizes: {
-        sm: {
-          min: '14px',
-          max: '18px',
-          minvw: '320px',
-          maxvw: '1400px'
-        },
-        md: {
-          min: '16px',
-          max: '22px',
-          minvw: '320px',
-          maxvw: '1400px'
-        },
-        lg: {
-          min: '18px',
-          max: '26px',
-          minvw: '320px',
-          maxvw: '1400px'
-        },
-        xl: {
-          min: '20px',
-          max: '26px',
-          minvw: '320px',
-          maxvw: '1400px'
-        }
-      }
+      suffix: '',
+      textSizes: true
     })
   ],
 }
