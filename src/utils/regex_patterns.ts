@@ -1,0 +1,1 @@
+export const strToLines = lines => lines.split(/\r?\n/)

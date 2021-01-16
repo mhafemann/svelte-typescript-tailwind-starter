@@ -3,7 +3,7 @@
 
   // prettier-ignore
   import { ThemeToggle, SideBar, Typography, TabManager} from './components/index'
-  import { ButtonsTest, CodeTest, TypographyTest, Layout, Header } from './site/index'
+  import { ButtonsTest, CodeTest, TypographyTest, Layout, Header, CodePlaceholder } from './site/index'
 
   const navItems = [
     { type: 'heading', text: 'utilities' },
@@ -12,6 +12,7 @@
     { type: 'heading', text: 'components' },
     { type: 'link', text: 'Buttons', component: ButtonsTest },
     { type: 'link', text: 'Code', component: CodeTest },
+    { type: 'link', text: 'Code Placeholder', component: CodePlaceholder },
   ]
   let active = 5
 </script>
