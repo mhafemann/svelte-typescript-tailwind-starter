@@ -2,19 +2,18 @@
   import Tailwindcss from './Tailwindcss.svelte'
 
   // prettier-ignore
-  import { ThemeToggle, SideBar, Typography, TabManager} from './components/index'
-  import { ButtonsTest, CodeTest, TypographyTest, Layout, Header, CodePlaceholder } from './site/index'
+  import { ThemeToggle, SideBar, Typography, TabManager, Sandbox } from './components/index'
+  import { ButtonsTest, CodeTest, TypographyTest, Layout, Header } from './site/index'
 
   const navItems = [
     { type: 'heading', text: 'utilities' },
     { type: 'link', text: 'Typography', component: TypographyTest },
-    { type: 'link', text: 'Layouts' },
     { type: 'heading', text: 'components' },
     { type: 'link', text: 'Buttons', component: ButtonsTest },
     { type: 'link', text: 'Code', component: CodeTest },
-    { type: 'link', text: 'Code Placeholder', component: CodePlaceholder },
+    { type: 'link', text: 'Sandbox', component: Sandbox },
   ]
-  let active = 5
+  let active = 4
 </script>
 
 <Tailwindcss />
@@ -42,5 +41,8 @@
 <style global type="text/postcss">
   .tr-200 {
     @apply transition-colors duration-200;
+  }
+  .box-shadow {
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
   }
 </style>

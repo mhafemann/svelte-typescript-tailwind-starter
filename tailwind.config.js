@@ -16,7 +16,9 @@ module.exports = {
       blue: colors.lightBlue,
       red: colors.red,
       orange: colors.orange,
-      green: colors.green
+      green: colors.green,
+      rose: colors.rose,
+      pink: colors.pink
     },
     container: {
       center: true,
@@ -25,31 +27,15 @@ module.exports = {
 
     fontFamily: {
       'sans': [
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "avenir next",
-        "avenir",
-        "helvetica neue",
-        "helvetica",
+        "-apple-system", 
+        "BlinkMacSystemFont", 
+        "Segoe UI", 
+        "Roboto",
+        "Oxygen-Sans",
         "Ubuntu",
-        "roboto",
-        "noto",
-        "segoe ui",
-        "arial",
-        "sans-serif" 
-      ],
-      'serif': [
-        "Iowan Old Style",
-        "Apple Garamond",
-        "Baskerville",
-        "Times New Roman",
-        "Droid Serif",
-        "Times",
-        "Source Serif Pro",
-        "serif",
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol"
+        "Cantarell",
+        "Helvetica Neue",
+        "sans-serif"
       ],
       'mono': [
         "Menlo",
@@ -60,7 +46,13 @@ module.exports = {
         "monospace"
       ],
     },
-    extend: {},
+    extend: {
+      colors: {
+        gray: {
+          850: '#232326'
+        }
+      }
+    },
   },
   corePlugins: {
     float: false,
@@ -88,12 +80,7 @@ module.exports = {
     },
   },
   textSizes: {
-    xs: {
-      min: '14px',
-      max: '18px',
-      minvw: '320px',
-      maxvw: '1400px'
-    },
+    xs: '18px',
     sm: {
       min: '16px',
       max: '20px',
@@ -132,7 +119,8 @@ module.exports = {
     require('tailwindcss-fluid')({
       suffix: '',
       textSizes: true
-    })
+    }),
+    require('tailwindcss-elevation')(['hover']),
   ],
 }
 

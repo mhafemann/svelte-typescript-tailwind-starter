@@ -1,9 +1,9 @@
 <!-- prettier-ignore -->
 <div class="flex-1 app-grid">
-  <div class="sidebar bg-gray-100 dark:bg-gray-800 tr-200">
+  <div class="sidebar bg-white dark:bg-gray-800 tr-200">
     <slot name="nav"/>
   </div>
-  <main class="bg-white dark:bg-gray-900 tr-200">
+  <main class=" bg-gray-100 dark:bg-gray-900 tr-200">
     <slot name="main"/>
   </main>
 </div>

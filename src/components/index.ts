@@ -7,7 +7,8 @@ import TabManager from './_tab_manager/TabManager.svelte'
 import ThemeToggle from './_theme-toggle/ThemeToggle.svelte'
 import Typography from './_typography/Typography.svelte'
 import Code from './_code/Code.svelte'
-import CodePlaceholder from './_code/CodePlaceholder.svelte'
+import Sandbox from './Sandbox.svelte'
+
 // prettier-ignore
 export {
   Button,
@@ -19,5 +20,5 @@ export {
   ThemeToggle,
   Typography,
   Code,
-  CodePlaceholder
+  Sandbox
 }

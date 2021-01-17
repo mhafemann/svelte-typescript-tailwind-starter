@@ -4,11 +4,11 @@
     @apply transition-colors duration-200;
   }
   .title {
-    @apply font-sans text-xxl text-gray-800 font-bold;
+    @apply font-sans text-xl text-gray-700 font-light uppercase tracking-wide;
   }
   .h1,
   .h2 {
-    @apply font-mono text-gray-800;
+    @apply font-mono text-gray-700;
   }
   .h1 {
     @apply text-xl;
