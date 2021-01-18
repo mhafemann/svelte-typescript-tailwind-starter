@@ -1,0 +1,22 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "node_modules": false,
+        "out": false,
+        "postcss.config.js": true,
+        "rollup.config.js": true,
+        "svelte.config.js": false,
+        "package.json": false,
+        "package-lock.json": true,
+        "README.md": true,
+        "LICENSE": true,
+        ".gitignore": true,
+        ".env": false,
+        "tailwind.config.js": false
+    },
+    "explorerExclude.backup": null
+}

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { strToLines } from '../../utils/regex_patterns'
   import Prism from 'prismjs'
   import 'prism-svelte'
   export let source = ''
@@ -16,34 +15,16 @@
       : lang === 'css'
       ? Prism.highlight(source, css, 'css')
       : Prism.highlight(source, svelteLang, 'svelte')
-
-  const lines = strToLines(source)
 </script>
 
 <!-- prettier-ignore -->
-<div class="rounded-lg overflow-hidden elevation-3 text-xs leading-5 font-mono">
-  <div class="code-grid bg-gray-800">
+<div class="rounded-lg overflow-hidden  text-xs leading-5 font-mono">
+  <div class="code-grid bg-white dark:bg-gray-800 tr-200">
     <div class="code-grid-child">
       <div class="flex h-full">
 
-          <!-- LINE NUMBERS -->
-          <div class="h-full w-14 flex flex-col justify-center bg-gray-850 select-none">
-            <div class="h-4"/>
-            <div class="flex justify-center w-full">
-              <div class="flex flex-col justify-center items-center text-gray-500">
-                {#each lines as l, i}
-                  <div class="w-full text-right">
-                    {i + 1}
-                  </div>
-                {/each}
-              </div>
-            </div>
-            <div class="h-4" />
-          </div>
-
           <!-- CODE -->
-          <pre
-            class="mt-4 pr-4 text-gray-300">
+          <pre class="p-4 text-gray-600 dark:text-gray-300 tr-200">
             <code>
               {@html highlighted || ""}
             </code>
