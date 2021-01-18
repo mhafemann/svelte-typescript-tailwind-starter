@@ -3,6 +3,7 @@ import Card from './_card/Card.svelte'
 import ContentPlaceholder from './_layouts/ContentPlaceholder.svelte'
 import NavBar from './_nav/NavBar.svelte'
 import SideBar from './_nav/SideBar.svelte'
+import Sbar from './_nav/Sbar.svelte'
 import TabManager from './_tab_manager/TabManager.svelte'
 import ThemeToggle from './_theme-toggle/ThemeToggle.svelte'
 import Typography from './_typography/Typography.svelte'
@@ -16,6 +17,7 @@ export {
   ContentPlaceholder,
   NavBar,
   SideBar,
+  Sbar,
   TabManager,
   ThemeToggle,
   Typography,

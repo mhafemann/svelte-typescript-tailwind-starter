@@ -2,7 +2,7 @@
   import Tailwindcss from './Tailwindcss.svelte'
 
   // prettier-ignore
-  import { ThemeToggle, SideBar, Typography, TabManager, Sandbox } from './components/index'
+  import { ThemeToggle, SideBar, Typography, TabManager, Sandbox, Sbar } from './components/index'
   import { ButtonsTest, CodeTest, TypographyTest, Layout, Header } from './site/index'
 
   const navItems = [
@@ -24,8 +24,8 @@
 <main class="flex flex-col h-full w-full">
 <Layout>
   <div slot="nav" style="height: 100%">
+    <!-- <Sbar/> -->
     <SideBar navItems={navItems} bind:active>
-      
     </SideBar>
   </div>
   <span slot="main">
