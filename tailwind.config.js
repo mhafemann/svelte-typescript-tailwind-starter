@@ -12,8 +12,11 @@ module.exports = {
       black: colors.black,
       white: colors.white,
       gray: colors.gray,
+      blueGray: colors.blueGray,
+      trueGray: colors.trueGray,
       yellow: colors.amber,
       blue: colors.lightBlue,
+      cyan: colors.cyan,
       red: colors.red,
       orange: colors.orange,
       green: colors.green,
@@ -21,37 +24,29 @@ module.exports = {
       pink: colors.pink
     },
     container: {
-      center: true,
       padding: '1rem'
-    },
-
-    fontFamily: {
-      'sans': [
-        "-apple-system", 
-        "BlinkMacSystemFont", 
-        "Segoe UI", 
-        "Roboto",
-        "Oxygen-Sans",
-        "Ubuntu",
-        "Cantarell",
-        "Helvetica Neue",
-        "sans-serif"
-      ],
-      'mono': [
-        "Menlo",
-        "Consolas",
-        "Monaco",
-        "Liberation Mono",
-        "Lucida Console",
-        "monospace"
-      ],
     },
     extend: {
       colors: {
         gray: {
           850: '#232326'
         }
-      }
+      },
+      typography: (theme) => ({
+        DEFAULT: {
+
+        }
+      })
+    },
+    fontFamily: {
+      'mono': [
+        'Menlo',
+        'Consolas',
+        'Monaco',
+        'Liberation Mono',
+        'Lucida Console',
+        'monospace'
+      ],
     },
   },
   corePlugins: {
@@ -72,11 +67,35 @@ module.exports = {
     tableLayout: false,
     clear: false,
     outline: false,
+    container: false,
+    fontSmoothing: false,
+    fontVariantNumeric: false,
+    gridAutoColumns: false,
+    gridAutoColumns: false,
+    gridAutoRows: false,
+    gridColumn: false,
+    gridColumnEnd: false,
+    gridColumnStart: false,
+    gridRow: false,
+    gridRowEnd: false,
+    gridRowStart: false,
+    gridTemplateColumns: false,
+    gridTemplateRows: false,
+    listStylePosition: false,
+    objectPosition: false,
+    placeContent: false,
+    placeItems: false,
+    placeSelf: false,
+    resize: false,
+    space: false,
+    strokeWidth: false,
+    tableLayout: false
   },
   variants: {
     extend: {
       opacity: ['disabled'],
       backgroundColor: ['active'],
+      backgroundOpacity: ['dark'],
     },
   },
   textSizes: {
@@ -87,7 +106,7 @@ module.exports = {
       minvw: '320px',
       maxvw: '1400px'
     },
-    md: {
+    med: {
       min: '18px',
       max: '22px',
       minvw: '320px',
@@ -123,4 +142,3 @@ module.exports = {
     require('tailwindcss-elevation')(['hover']),
   ],
 }
-
